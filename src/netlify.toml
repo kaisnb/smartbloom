@@ -1,0 +1,4 @@
+# It's a SPA. So we need to redirect everything to index.html.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
