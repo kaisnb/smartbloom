@@ -5,15 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { FooterNavComponent } from './components/footer-nav/footer-nav.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-import { MatButtonModule } from '@angular/material/button';
+import { MaterialModule } from './modules/material/material.module';
 
 @NgModule({
   declarations: [AppComponent, FooterNavComponent],
@@ -21,14 +19,12 @@ import { MatButtonModule } from '@angular/material/button';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FlexLayoutModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production
     }),
+    MaterialModule,
     MatToolbarModule,
-    MatIconModule,
-    MatMenuModule,
-    MatButtonModule
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

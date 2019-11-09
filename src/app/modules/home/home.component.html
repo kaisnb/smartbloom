@@ -1,1 +1,24 @@
-<p>home works!</p>
+<div fxLayout="column" fxLayoutAlign="center center" style="text-align:center;padding:8px;">
+  <h1>Welcome to Smartbloom!</h1>
+  <h2>Please tell us something about you</h2>
+  <mat-form-field>
+    <mat-label>Gender</mat-label>
+    <mat-select>
+      <mat-option value="Male">Male</mat-option>
+      <mat-option value="Female">Female</mat-option>
+      <mat-option value="Diverse">Diverse</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Weight" type="number" />
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Height" type="number" />
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Date of birth" [max]="maxDate" />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker touchUi #picker></mat-datepicker>
+  </mat-form-field>
+  <button mat-raised-button color="primary" style="margin-top: 8px;">Get healthier 🍑</button>
+</div>
