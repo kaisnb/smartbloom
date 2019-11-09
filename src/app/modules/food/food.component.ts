@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { FabService } from 'src/app/fab.service';
 
 @Component({
   selector: 'sb-food',
@@ -7,10 +8,9 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FoodComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  constructor(fab: FabService) {
+    fab.hide();
   }
 
+  ngOnInit() {}
 }

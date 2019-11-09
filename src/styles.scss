@@ -12,7 +12,7 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 
-$sb-lime: (
+$sb-blue: (
   50: #009de0,
   100: #009de0,
   200: #009de0,
@@ -45,8 +45,8 @@ $sb-lime: (
   )
 );
 
-$smartbloom-primary: mat-palette($sb-lime);
-$smartbloom-accent: mat-palette($mat-pink, A200, A100, A400);
+$smartbloom-primary: mat-palette($sb-blue);
+$smartbloom-accent: mat-palette($sb-blue);
 
 // The warn palette is optional (defaults to red).
 $smartbloom-warn: mat-palette($mat-red);
@@ -76,4 +76,11 @@ body {
   outline: none;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: rgba(17, 17, 17, 0.6);
 }

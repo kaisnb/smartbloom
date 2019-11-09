@@ -1,4 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { FabService } from './fab.service';
 
 @Component({
   selector: 'sb-root',
@@ -7,5 +8,5 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
-  title = 'Smartbloom';
+  constructor(public fab: FabService) {}
 }

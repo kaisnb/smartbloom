@@ -1,6 +1,7 @@
 <div fxFlexFill fxLayout="column">
   <mat-toolbar color="primary">
     <mat-toolbar-row>
+      <img src="./assets/icons/icon-72x72.png" style="height:36px;padding-right:8px;" />
       <span>Smartbloom</span>
       <span fxFlex></span>
       <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="menu">
@@ -16,6 +17,16 @@
   <div fxFlex class="scroll-container">
     <router-outlet></router-outlet>
   </div>
+
+  <button id="fabBtn" mat-fab [matMenuTriggerFor]="menu" color="primary" *ngIf="fab.visilbe$ | async">
+    <mat-icon>add</mat-icon>
+  </button>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item *ngFor="let e of fab.entries$ | async">
+      <mat-icon>{{ e.icon }}</mat-icon> {{ e.title }}
+    </button>
+  </mat-menu>
 
   <sb-footer-nav></sb-footer-nav>
 </div>

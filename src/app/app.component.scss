@@ -13,3 +13,9 @@ mat-toolbar {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
+
+#fabBtn {
+  right: 16px;
+  bottom: 64px;
+  position: absolute;
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { FabService } from 'src/app/fab.service';
 
 @Component({
   selector: 'sb-home',
@@ -9,7 +10,9 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 export class HomeComponent implements OnInit {
   maxDate = new Date();
 
-  constructor() {}
+  constructor(fab: FabService) {
+    fab.hide();
+  }
 
   ngOnInit() {}
 }
